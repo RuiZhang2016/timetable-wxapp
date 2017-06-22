@@ -12,11 +12,6 @@ Page({
  
     wlist: [
       { "id": 1, "start": 1, "dur":2, "day":1 ,"info":"Lecture1 / 1 ", "location":"JD 102", "name":"ACST\n4032", "fullName": "ACST4032_S2 Actuarial Control Cycle 2" },
-     
-     
-
-
-     
     ]
   },
   //<!--added by rui-- >

@@ -1,8 +1,7 @@
 <!--input.wxml-->
 
-
 <view class="searchbox"  >
-  <input name="sbox" placeholder="搜索：(如：MATH1005)" bindconfirm="search" confirm-type="search"/>
+  <input name="sbox" placeholder="搜索：(如：MATH1005)" bindinput="search" confirm-type="search"/>
 </view>
 
 <view class="search-result">
@@ -11,7 +10,7 @@
   </view>
   <view class="searchItem">
     <view wx:for="{{searchResults}}" >
-      <label bindtap="goinfo">{{item}}</label>
+      <label bindtap="goinfo" data-text="{{item}}">{{item}}</label>
     </view>  
   </view>
 </view>
