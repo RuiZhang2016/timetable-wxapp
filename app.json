@@ -1,9 +1,11 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/input/input",
+    "pages/courseinfo/courseinfo"
   ],
-  "window":{
+  "window": {
     "backgroundTextStyle": "dark",
     "navigationBarTitleText": "TimeTable",
     "navigationBarBackgroundColor": "#7cba23",

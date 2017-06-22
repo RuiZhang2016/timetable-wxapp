@@ -1,0 +1,32 @@
+<!--/pages/courseinfo/courseinfo.wxml-->
+<template name="tutorial">
+<!--课程名-->
+<view class="name">
+  <text>{{name}}</text>
+</view>
+
+<!--lecture列表-->
+<view class="currentCourse">
+  <!--小标题-->
+  <view class="title">
+    <text>Lectures</text>
+  </view>
+  <view wx:for="{{lectures}}" class="currentCourse">
+  
+  </view>
+</view>
+<!--tutorial列表-->
+<!--小标题-->
+<view class="title">
+  <text>Choose Your Tutorial</text>
+</view>
+<view wx:for="{{currentT}}">
+  <!--点击添加tutorial-->
+  <view class="currentCourse" bindtap="addT" >
+    <text>{{item.id}} </text>
+    <text>{{item.day}}</text>
+    <text>{{item.start}}</text>
+    <text>{{item.location}}</text>
+  </view>
+</view>  
+</template>

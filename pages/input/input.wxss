@@ -1,0 +1,35 @@
+/* input.wxss */
+
+.searchbox{
+  display: flex;
+  flex-direction: row;
+  background-color: #e0e0e0;
+  color: #ffffff;
+  text-align: center;
+}
+
+.search-result{
+  background-color: #878787;
+}
+
+.title{
+  font-size: 10px;
+  color: #ffffff;
+  background-color: #878787;
+  padding-left: 10rpx;
+}
+
+.currentCourse{
+  color: #ffffff;
+  font-size: 15pt;
+  background-color: #e0e0e0;
+  padding-left: 30rpx;
+
+}
+
+.searchItem{
+  color: #ffffff;
+  font-size: 15pt;
+  background-color: #e0e0e0;
+  padding-left: 30rpx;
+}

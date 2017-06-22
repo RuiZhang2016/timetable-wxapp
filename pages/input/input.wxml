@@ -1,0 +1,31 @@
+<!--input.wxml-->
+
+
+<view class="searchbox"  >
+  <input name="sbox" placeholder="搜索：(如：MATH1005)" bindconfirm="search" confirm-type="search"/>
+</view>
+
+<view class="search-result">
+  <view class="title">
+   <text>Search results</text>
+  </view>
+  <view class="searchItem">
+    <view wx:for="{{searchResults}}" >
+      <label bindtap="goinfo">{{item}}</label>
+    </view>  
+  </view>
+</view>
+
+
+   <view class="title">
+   <text>Current courses（点击课程修改）</text>
+  </view>
+  <view wx:for="{{currentCourses}}" >
+    <view class="currentCourse" bindtap="goinfo" >
+      {{item}}
+     <!-- <view style="width:750rpx;padding-top:{{(index+1)*40}}rpx;  position: absolute;border-bottom:1rpx solid ;"></view>-->
+    </view>
+    
+  </view>  
+
+
