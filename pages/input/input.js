@@ -1,24 +1,22 @@
 // input.js
+var fileCourses = require('../../utils/courses.js')
+var fileUser = require('../../utils/user.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  currentCourses:[
-    'COMP1130','BUSN7008','MATH2222','STAT1008'],
-  searchResults:'',
-  courses: ['COMP1130', 'BUSN7008', 'MATH2222', 'STAT1008', 'STAT1003', 'MATH1013', 'COMP2300', 'ENGN4600', 'ASCT1003', 'ENGN1211']
+    currentCourses:null,
+    searchResults:null,
+    courses: fileCourses.coursesName()
   },
   //进入选tutorial界面
   goinfo: function (e) {
-    var ccode = e.currentTarget.dataset.text
-    this.setData({
-      searchResults: [ccode]
+    getApp().globalData.ccode = e.currentTarget.dataset.text
+    wx.navigateTo({
+      url: "../courseinfo/courseinfo",
     })
-    // wx.navigateTo({
-    //   url: "../courseinfo/courseinfo",
-    // })
   },
 
   search: function(e){
@@ -36,12 +34,18 @@ Page({
         })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-  
+    var ids = fileUser.ids()
+    var tmpCourses = []
+    for (let i =0 ; i < ids.length; i++){
+      var tmpCourse = fileCourses.searchId(ids[i])
+      tmpCourses.push(tmpCourse['name'])
+    }
+    this.setData({
+      currentCourses:tmpCourses
+    })
   },
-
+  
+  
   
 })

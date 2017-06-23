@@ -16,6 +16,12 @@ function formatNumber(n) {
   return n[1] ? n : '0' + n
 }
 
+function coursesJson(){
+  var data = require('../courses.json')
+  return data
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  coursesJson: coursesJson
 }
